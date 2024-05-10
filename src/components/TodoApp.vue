@@ -25,6 +25,7 @@
     <table class="task-table">
       <thead>
         <tr>
+          <th scope="col" style="width: 50px">Task.no</th>
           <th scope="col">Task</th>
           <th scope="col" style="width: 120px">Status</th>
           <th scope="col" style="width: 80px">Prioritize</th>
@@ -33,10 +34,11 @@
       </thead>
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
+          <td>{{ index + 1 }}</td>
           <td>
-          <span :class="{ 'completed-task': task.status === 'finished', 'in-progress-task': task.status === 'in-progress', 'bold-task': task.prioritize }">
-            {{ task.name }}
-          </span>
+            <span :class="{ 'completed-task': task.status === 'finished', 'in-progress-task': task.status === 'in-progress', 'bold-task': task.prioritize }">
+              {{ task.name }}
+            </span>
           </td>
           <td>
             <span
@@ -135,7 +137,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .todo-app-container {
