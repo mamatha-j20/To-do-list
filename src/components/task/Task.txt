@@ -1,0 +1,4 @@
+TaskEdit.vue
+TaskList.vue
+TaskNew.vue
+TaskPreview.vue
