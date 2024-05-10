@@ -1,0 +1,4 @@
+assets folder
+components folder
+App.vue
+main.js
